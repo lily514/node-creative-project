@@ -28,7 +28,7 @@ function mainCtrl ($scope, costumeFetcher, $http) {
     })
 
 $scope.addCostume = function() {
-  var formData = {name:$scope.Name,avatarUrl:$scope.Url};
+  var formData = {name:$scope.Name,avatarUrl:$scope.Url,upvotes:0};
   console.log(formData);
   var costumeURL = 'costume';
   $http({
@@ -46,5 +46,23 @@ $scope.addCostume = function() {
     console.log("Post failed");
   });
 }
+
+  $scope.addVote = function (costume) {
+	console.log("add vote")	
+	console.log(costume)
+	$http({
+     		url: 'vote',
+    		method: "POST",
+     		data: costume
+  	}).success(function(data, status, headers, config) {
+    		console.log("Post worked");
+    		costumeFetcher.get()
+      			.then(function (data) {
+        		$scope.costume = data
+    		})
+	}).error(function(data, status, headers, config) {
+    		console.log("Post failed");
+  	});
+  }  
   
 }
