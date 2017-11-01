@@ -31,7 +31,7 @@
     </div>
 
     <ul ng-if='costume.length' class='list center stretch'>
-      <li ng-repeat='c in costume' class='costume'>
+      <li ng-repeat="c in costume | orderBy:'-upvotes'" class='costume'>
         <h1>{{ c.name }}</h1>
 	<h3><span class="glyphicon glyphicon-thumbs-up"
         ng-click="addVote(c)"></span> {{c.upvotes}}</h3>
