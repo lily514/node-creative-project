@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="javascripts/app.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <meta charset="utf-8">
+  <title>Node api tutorial</title>
+</head>
+<body>
+
+  <div id='app' ng-app='app' ng-controller='mainCtrl'>
+
+<h1> Enter a new costume</h1>
+<form id="newCostume" ng-submit="addCostume()">
+  Name: <input type="text" ng-model="Name" value=""><br>
+  Url: <input type="url" ng-model="Url" value=""><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+    <div ng-if='!costume.length' class='costume_collection'>
+      <h1 class='h1'>
+        Set up your endpoint at `/pokemon` to get this view working
+      </h1>
+    </div>
+
+    <ul ng-if='costume.length' class='list center stretch'>
+      <li ng-repeat='c in costume' class='costume'>
+        <h1>{{ c.name }}</h1>
+        <img class='avatar' ng-src="{{c.avatarUrl}}" />
+      </li>
+    </ul>
+
+
+  </div>
+
+</body>
+</html>
