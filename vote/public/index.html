@@ -10,17 +10,25 @@
 <script src="javascripts/app.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <meta charset="utf-8">
-  <title>Node api tutorial</title>
+  <title>BYU Halloween Costume Contest</title>
 </head>
 <body>
+<div id="title">
+	<h1> BYU Halloween Costume Contest </h1>
+</div>
+
 
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
 
-<h1> Enter a new costume</h1>
 <form id="newCostume" ng-submit="addCostume()">
-  Name: <input type="text" ng-model="Name" value=""><br>
-  Url: <input type="url" ng-model="Url" value=""><br>
-  <input type="submit" value="Submit">
+<h2>Upload a costume!</h2>
+<div class="form-group">
+  <label for="name"> Name </label>
+  <input id="name" type="text" ng-model="Name" value=""><br>
+  <label for="url">Url</label>
+  <input id="url"  type="url" ng-model="Url" value=""><br>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 
