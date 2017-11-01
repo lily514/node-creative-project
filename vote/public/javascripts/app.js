@@ -37,6 +37,11 @@ $scope.addCostume = function() {
      data: formData
   }).success(function(data, status, headers, config) {
     console.log("Post worked");
+    costumeFetcher.get()
+      .then(function (data) {
+        $scope.costume = data
+    })
+
   }).error(function(data, status, headers, config) {
     console.log("Post failed");
   });
