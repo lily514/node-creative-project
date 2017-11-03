@@ -5,7 +5,10 @@ var costumes = [
   {
     name: 'Kaylee',
     avatarUrl: 'https://scontent.fmkc1-1.fna.fbcdn.net/v/t31.0-8/22904854_10155814706393245_8910946532594894102_o.jpg?oh=0df921752c815efe1da129e7cc940fed&oe=5AA4E1F8',
-    upvotes: 0
+    upvotes:0,
+    name: 'Wonder Woman',
+    avatarUrl: 'https://images.halloweencostumes.com/products/9353/1-1/wonder-woman-t-shirt-costume.jpg',
+    upvotes:0
   },
 ];
 

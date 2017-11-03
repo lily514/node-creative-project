@@ -45,6 +45,8 @@ $scope.addCostume = function() {
   }).error(function(data, status, headers, config) {
     console.log("Post failed");
   });
+  document.getElementById('name').value = '';
+  document.getElementById('url').value = '';
 }
 
   $scope.addVote = function (costume) {
